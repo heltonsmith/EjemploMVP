@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:id="@+id/myToolbar"
+    android:background="@android:color/holo_blue_light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
