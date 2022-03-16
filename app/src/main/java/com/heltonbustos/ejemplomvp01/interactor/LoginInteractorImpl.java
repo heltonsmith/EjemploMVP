@@ -35,6 +35,5 @@ public class LoginInteractorImpl implements LoginInteractor {
                 bd.close();
             }
         }
-
     }
 }

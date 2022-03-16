@@ -48,7 +48,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
                 .beginTransaction()
                 .add(R.id.myFrame, new FragRegistroEquipo())
                 .commit();
-        setTitle("Registrar equipo");
+        setTitle("Registrar equipo " + nombre);
 
         //para activar icono hamburguesa
         //toogle = new ActionBarDrawerToggle(this, myDrawer, myToolbar, R.string.drawer_open, R.string.drawer_close);
