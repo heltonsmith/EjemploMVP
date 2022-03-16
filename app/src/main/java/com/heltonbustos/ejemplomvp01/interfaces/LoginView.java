@@ -6,7 +6,7 @@ public interface LoginView {
     void esconderProgreso();
     void setErrorUser();
     void setErrorPassword();
-    void exito();
+    void exito(String nombre);
     void noExiste();
 
 }

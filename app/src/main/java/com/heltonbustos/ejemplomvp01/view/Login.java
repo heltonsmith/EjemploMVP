@@ -57,8 +57,12 @@ public class Login extends AppCompatActivity implements LoginView {
     }
 
     @Override
-    public void exito() {
-        startActivity(new Intent(this, OtraActividad.class));
+    public void exito(String nombre) {
+        Intent intent = new Intent(this, OtraActividad.class);
+
+        intent.putExtra("x", nombre);
+
+        startActivity(intent);
     }
 
     @Override

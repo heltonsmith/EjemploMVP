@@ -43,10 +43,10 @@ public class LoginPresenterImpl implements LoginPresenter {
     }
 
     @Override
-    public void exito() {
+    public void exito(String nombre) {
         if(vista != null){
             vista.esconderProgreso();
-            vista.exito();
+            vista.exito(nombre);
         }
     }
 
