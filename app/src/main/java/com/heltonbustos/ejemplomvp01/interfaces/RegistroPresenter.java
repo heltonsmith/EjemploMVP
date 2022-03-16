@@ -1,0 +1,12 @@
+package com.heltonbustos.ejemplomvp01.interfaces;
+
+import android.content.Context;
+
+public interface RegistroPresenter {
+    void registrar(String nombre, String user, String pass, Context contexto);
+    void error();
+    void exito();
+    void setErrorNombre();
+    void setErrorUser();
+    void setErrorPassword();
+}

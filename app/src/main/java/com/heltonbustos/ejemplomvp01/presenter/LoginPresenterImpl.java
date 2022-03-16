@@ -1,5 +1,7 @@
 package com.heltonbustos.ejemplomvp01.presenter;
 
+import android.content.Context;
+
 import com.heltonbustos.ejemplomvp01.interactor.LoginInteractorImpl;
 import com.heltonbustos.ejemplomvp01.interfaces.LoginInteractor;
 import com.heltonbustos.ejemplomvp01.interfaces.LoginPresenter;
@@ -17,11 +19,11 @@ public class LoginPresenterImpl implements LoginPresenter {
 
 
     @Override
-    public void validarUsuario(String user, String pass) {
+    public void validarUsuario(String user, String pass, Context contexto) {
         if(vista != null){
             vista.mostrarProgreso();
         }
-        interactor.validarUsuario(user, pass, this);
+        interactor.validarUsuario(user, pass, this, contexto);
     }
 
     @Override

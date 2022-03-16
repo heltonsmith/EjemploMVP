@@ -67,6 +67,10 @@ public class Login extends AppCompatActivity implements LoginView {
     }
 
     public void solicitarValidacion(View view){
-        presentador.validarUsuario(txtUser.getText().toString(), txtPass.getText().toString());
+        presentador.validarUsuario(txtUser.getText().toString(), txtPass.getText().toString(), this);
+    }
+
+    public void abrirRegistro(View view){
+        startActivity(new Intent(this, Registro.class));
     }
 }

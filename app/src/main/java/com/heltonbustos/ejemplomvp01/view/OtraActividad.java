@@ -3,7 +3,6 @@ package com.heltonbustos.ejemplomvp01.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
 import com.heltonbustos.ejemplomvp01.R;
 
 public class OtraActividad extends AppCompatActivity {
