@@ -1,4 +1,4 @@
-package com.heltonbustos.ejemplomvp01.view;
+package com.heltonbustos.ejemplomvp01.view.actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,11 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.heltonbustos.ejemplomvp01.R;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginPresenter;
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroPresenter;
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroView;
-import com.heltonbustos.ejemplomvp01.presenter.LoginPresenterImpl;
-import com.heltonbustos.ejemplomvp01.presenter.RegistroPresenterImpl;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroPresenter;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroView;
+import com.heltonbustos.ejemplomvp01.presenter.registrouser.RegistroPresenterImpl;
 
 public class Registro extends AppCompatActivity implements RegistroView {
 

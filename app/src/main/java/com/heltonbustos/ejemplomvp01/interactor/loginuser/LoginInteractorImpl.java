@@ -1,13 +1,12 @@
-package com.heltonbustos.ejemplomvp01.interactor;
+package com.heltonbustos.ejemplomvp01.interactor.loginuser;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Handler;
-import android.widget.Toast;
 
-import com.heltonbustos.ejemplomvp01.interfaces.LoginInteractor;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginPresenter;
+import com.heltonbustos.ejemplomvp01.interactor.bd.ConexionBD;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginInteractor;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginPresenter;
 
 public class LoginInteractorImpl implements LoginInteractor {
     @Override

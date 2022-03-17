@@ -1,13 +1,12 @@
-package com.heltonbustos.ejemplomvp01.interactor;
+package com.heltonbustos.ejemplomvp01.interactor.registrouser;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroInteractor;
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroPresenter;
-import com.heltonbustos.ejemplomvp01.view.Registro;
+import com.heltonbustos.ejemplomvp01.interactor.bd.ConexionBD;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroInteractor;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroPresenter;
 
 public class RegistroInteractorImpl implements RegistroInteractor {
 

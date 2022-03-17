@@ -1,15 +1,11 @@
-package com.heltonbustos.ejemplomvp01.presenter;
+package com.heltonbustos.ejemplomvp01.presenter.registrouser;
 
 import android.content.Context;
 
-import com.heltonbustos.ejemplomvp01.interactor.LoginInteractorImpl;
-import com.heltonbustos.ejemplomvp01.interactor.RegistroInteractorImpl;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginInteractor;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginView;
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroInteractor;
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroPresenter;
-import com.heltonbustos.ejemplomvp01.interfaces.RegistroView;
-import com.heltonbustos.ejemplomvp01.view.Registro;
+import com.heltonbustos.ejemplomvp01.interactor.registrouser.RegistroInteractorImpl;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroInteractor;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroPresenter;
+import com.heltonbustos.ejemplomvp01.interfaces.registrouser.RegistroView;
 
 public class RegistroPresenterImpl implements RegistroPresenter {
 

@@ -1,4 +1,4 @@
-package com.heltonbustos.ejemplomvp01.interfaces;
+package com.heltonbustos.ejemplomvp01.interfaces.registrouser;
 
 public interface RegistroView {
     void exito();

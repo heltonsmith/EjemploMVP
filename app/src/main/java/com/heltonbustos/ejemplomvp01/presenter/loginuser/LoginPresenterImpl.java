@@ -1,11 +1,11 @@
-package com.heltonbustos.ejemplomvp01.presenter;
+package com.heltonbustos.ejemplomvp01.presenter.loginuser;
 
 import android.content.Context;
 
-import com.heltonbustos.ejemplomvp01.interactor.LoginInteractorImpl;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginInteractor;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginPresenter;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginView;
+import com.heltonbustos.ejemplomvp01.interactor.loginuser.LoginInteractorImpl;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginInteractor;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginPresenter;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginView;
 
 public class LoginPresenterImpl implements LoginPresenter {
 

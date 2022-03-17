@@ -1,4 +1,4 @@
-package com.heltonbustos.ejemplomvp01.view;
+package com.heltonbustos.ejemplomvp01.view.actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,9 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.heltonbustos.ejemplomvp01.R;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginPresenter;
-import com.heltonbustos.ejemplomvp01.interfaces.LoginView;
-import com.heltonbustos.ejemplomvp01.presenter.LoginPresenterImpl;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginPresenter;
+import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginView;
+import com.heltonbustos.ejemplomvp01.presenter.loginuser.LoginPresenterImpl;
 
 public class Login extends AppCompatActivity implements LoginView {
 
