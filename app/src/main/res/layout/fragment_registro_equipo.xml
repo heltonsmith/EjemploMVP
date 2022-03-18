@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:enabled="true"
-                android:text="Registrar Quipo" />
+                android:text="Registrar Equipo" />
 
         </LinearLayout>
     </ScrollView>

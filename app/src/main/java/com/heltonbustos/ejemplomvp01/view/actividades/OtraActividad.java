@@ -297,7 +297,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
             String tiempo = formatter.format(new Date());
 
             //agrego el dueño de la foto
-            String filename = cod + "@foto1" + "@" + tiempo;
+            String filename = cod + "@foto2" + "@" + tiempo;
 
             values.put(MediaStore.Images.Media.DISPLAY_NAME, filename);
             values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
@@ -326,7 +326,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
             String tiempo = formatter.format(new Date());
 
             //agrego el dueño de la foto
-            String filename = cod + "@foto1" + "@" + tiempo + ".jpg"; //nombre del archivo
+            String filename = cod + "@foto2" + "@" + tiempo + ".jpg"; //nombre del archivo
 
             file = new File(imageDir, filename);
 
