@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="10dp"
+        android:textSize="20sp"
+        android:layout_marginTop="7dp"
+        android:background="@color/purple_200" />
+
+    <TextView
+        android:id="@+id/txtCodigoEquipoL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Código"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/txtNombreEquipoL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/txtFechaEquipoL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/txtBolsoEquipoL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bolso"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/txtCargadorEquipoL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargador"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/img1Equipo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginRight="7dp"/>
+
+        <ImageView
+            android:id="@+id/img2Equipo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

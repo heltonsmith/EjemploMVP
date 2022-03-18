@@ -27,10 +27,12 @@ import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.heltonbustos.ejemplomvp01.R;
+import com.heltonbustos.ejemplomvp01.interactor.manejocamara.Permisos;
 import com.heltonbustos.ejemplomvp01.view.fragmentos.FragEliminarRegistroEquipos;
 import com.heltonbustos.ejemplomvp01.view.fragmentos.FragRegistroEquipo;
 import com.heltonbustos.ejemplomvp01.view.fragmentos.FragVerEquipos;
@@ -71,6 +73,8 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
     Bitmap bitmap;
     List<Bitmap> listaFotos = new ArrayList<>();
 
+    String nombre = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +86,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
         myToolbar = findViewById(R.id.myToolbar);
 
         //variable que viene de actividad anterior
-        String nombre = getIntent().getStringExtra("x");
+        nombre = getIntent().getStringExtra("x");
 
         //mostrar actionbar
         setSupportActionBar(myToolbar);
@@ -95,7 +99,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
                 .beginTransaction()
                 .add(R.id.myFrame, new FragRegistroEquipo())
                 .commit();
-        setTitle("Registrar equipo " + nombre);
+        setTitle("Registrar equipo - " + nombre);
 
         //para activar icono hamburguesa
         //toogle = new ActionBarDrawerToggle(this, myDrawer, myToolbar, R.string.drawer_open, R.string.drawer_close);
@@ -118,21 +122,14 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
     }
 
     public void permisoCamaraGeneral(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){ //android marshmallow (Permiso en tiempo de ejecución)
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
-                tomarFoto();
-            }
-            else{ //api > 28 (Q)
-                ActivityCompat.requestPermissions(
-                        this,
-                        new String[]{Manifest.permission.CAMERA},
-                        REQUEST_PERMISSION_CAMERA
-                );
-            }
-        }
-        else{ //permiso en tiempo de descarga
-            tomarFoto();
-        }
+        /*
+            Permisos p = new Permisos(this, this);
+            int x = p.permisoGeneral();
+            if(x == 1) tomarFoto();
+        */
+
+        if(new Permisos(this, this).permisoGeneral() == 1) tomarFoto();
+
     }
     /*
      * implementacion de Camara permisos permisosCamara1() y permisoCamaraGeneral()
@@ -465,7 +462,7 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
                 ft.replace(R.id.myFrame, new FragEliminarRegistroEquipos()).commit();
                 break;
         }
-        setTitle(item.getTitle()); //para mostrar el título
+        setTitle(item.getTitle() + " - " + nombre); //para mostrar el título
         myDrawer.closeDrawers(); //para cerrar drawer
         return true;
     }

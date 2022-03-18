@@ -25,8 +25,6 @@ public class TestingSQLite {
         String fecha = "";
         String bolso = "";
         String cargador = "";
-        String foto1 = "";
-        String foto2 = "";
 
         ConexionBD conexion = new ConexionBD(contexto, "administracion", null, 1);
         SQLiteDatabase bd = conexion.getWritableDatabase();

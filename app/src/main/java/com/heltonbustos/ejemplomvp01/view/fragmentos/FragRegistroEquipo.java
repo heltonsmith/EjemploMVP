@@ -49,8 +49,6 @@ public class FragRegistroEquipo extends Fragment implements RegistroEquipoView {
     //ImageView para fotos
     ImageView img1, img2;
 
-    //variable para contar fotos
-    public static int cant = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
