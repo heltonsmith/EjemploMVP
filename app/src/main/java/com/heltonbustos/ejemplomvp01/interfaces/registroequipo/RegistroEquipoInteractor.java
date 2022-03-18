@@ -6,5 +6,5 @@ import com.heltonbustos.ejemplomvp01.presenter.registroequipo.RegistroEquipoPres
 public interface RegistroEquipoInteractor {
     void registrar(String codigo, String nombre,
                    String fecha, String bolso, String cargador,
-                   String foto1, String foto2, RegistroEquipoPresenterImpl presenter, Context contexto);
+                   RegistroEquipoPresenterImpl presenter, Context contexto);
 }

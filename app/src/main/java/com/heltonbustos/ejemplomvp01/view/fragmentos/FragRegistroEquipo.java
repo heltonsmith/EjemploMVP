@@ -41,7 +41,6 @@ public class FragRegistroEquipo extends Fragment implements RegistroEquipoView {
     RegistroEquipoPresenter presenter;
 
     //variables para trabajar con los nombres de las fotos
-    String foto = "";
     String f = "";
 
     //botones para tomar foto 1, foto 2 y registro
@@ -94,14 +93,14 @@ public class FragRegistroEquipo extends Fragment implements RegistroEquipoView {
         btnFoto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((OtraActividad)getActivity()).permisosCamara1("foto1", img1);
+                ((OtraActividad)getActivity()).permisosCamara1(img1);
             }
         });
 
         btnFoto2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((OtraActividad)getActivity()).permisosCamara2("foto2", img2);
+                ((OtraActividad)getActivity()).permisosCamara2(img2);
             }
         });
 
@@ -117,9 +116,8 @@ public class FragRegistroEquipo extends Fragment implements RegistroEquipoView {
 
     @Override
     public void exito() {
-        ((OtraActividad)getActivity()).permisosAlmacenamiento();
-        Toast.makeText(getContext(), "Registro completo", Toast.LENGTH_SHORT).show();
-        reset();
+        Toast.makeText(getContext(), "REGISTRO OK", Toast.LENGTH_SHORT).show();
+        ((OtraActividad)getActivity()).permisosAlmacenamiento(txtCodigo.getText().toString());
     }
 
     @Override
@@ -144,19 +142,12 @@ public class FragRegistroEquipo extends Fragment implements RegistroEquipoView {
         if(rdSiCargador.isChecked()){ cargador = "SI"; }
         if(swBolso.isChecked()){ bolso = "SI"; }
 
-        presenter.registrar(txtCodigo.getText().toString(), txtNombre.getText().toString(), f, bolso, cargador,"foto1","foto2", getContext());
+        presenter.registrar(txtCodigo.getText().toString(), txtNombre.getText().toString(), f, bolso, cargador, getContext());
     }
 
     public static void mostrarImagen(ImageView img, Bitmap bitmap){
         img.setImageBitmap(bitmap);
     }
 
-    public void reset(){
-        cant = 0;
-        txtCodigo.setText("");
-        txtNombre.setText("");
-        img1.setImageResource(R.drawable.noimage);
-        img2.setImageResource(R.drawable.noimage);
-    }
 
 }

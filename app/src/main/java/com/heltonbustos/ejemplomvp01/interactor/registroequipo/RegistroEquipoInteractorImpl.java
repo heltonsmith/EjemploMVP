@@ -11,7 +11,7 @@ import com.heltonbustos.ejemplomvp01.presenter.registroequipo.RegistroEquipoPres
 public class RegistroEquipoInteractorImpl implements RegistroEquipoInteractor {
     @Override
     public void registrar(String codigo, String nombre, String fecha,
-                          String bolso, String cargador, String foto1, String foto2, RegistroEquipoPresenterImpl presenter, Context contexto) {
+                          String bolso, String cargador, RegistroEquipoPresenterImpl presenter, Context contexto) {
         if(codigo.equals("")){
             presenter.setErrorCodigo();
         }
@@ -29,17 +29,19 @@ public class RegistroEquipoInteractorImpl implements RegistroEquipoInteractor {
             registro.put("fecha", fecha);
             registro.put("bolso", bolso);
             registro.put("cargador", cargador);
-            registro.put("foto1", foto1);
-            registro.put("foto2", foto2);
 
             long x = bd.insert("registroequipo", null, registro);
-            bd.close();
 
-            if (x > 0) {
+            if(x > 0){
                 presenter.exito();
-            } else {
+            }
+            else{
                 presenter.error();
             }
+
+            bd.close();
+
+            presenter.exito();
         }
     }
 }

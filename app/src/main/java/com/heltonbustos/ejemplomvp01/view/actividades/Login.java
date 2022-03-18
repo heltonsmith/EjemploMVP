@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.heltonbustos.ejemplomvp01.R;
+import com.heltonbustos.ejemplomvp01.interactor.test.TestingSQLite;
 import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginPresenter;
 import com.heltonbustos.ejemplomvp01.interfaces.loginuser.LoginView;
 import com.heltonbustos.ejemplomvp01.presenter.loginuser.LoginPresenterImpl;
@@ -34,6 +35,9 @@ public class Login extends AppCompatActivity implements LoginView {
         barraProgreso = findViewById(R.id.barraProgreso);
 
         presentador = new LoginPresenterImpl(this);
+
+        TestingSQLite t = new TestingSQLite(this);
+        t.listarTodo();
     }
 
     @Override
