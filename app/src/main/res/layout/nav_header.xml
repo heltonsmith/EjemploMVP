@@ -8,6 +8,7 @@
     android:background="@android:color/darker_gray">
 
     <ImageView
+        android:id="@+id/imCabecera"
         android:layout_width="@dimen/icono_perfil"
         android:layout_height="@dimen/icono_perfil"
         android:src="@drawable/ic_profile"

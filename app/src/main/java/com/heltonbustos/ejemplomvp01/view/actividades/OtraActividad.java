@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -75,6 +76,12 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
 
     String nombre = "";
 
+    //TextView Cabecera
+    TextView cabecera;
+
+    //ImageView Cabecera
+    ImageView imCabecera;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,7 +113,15 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
         toogle = setDrawerToogle();
         myDrawer.addDrawerListener(toogle); //para oir al icono de hamburguesa
 
+        //para setear el nombre en la cabecera
+        //imCabecera = header.findViewById(R.id.imCabecera);
+        //imCabecera.setImageResource(R.drawable.yo);
+
+        View header = myNav.getHeaderView(0);
+        cabecera = header.findViewById(R.id.txtNombreCabecera);
+        cabecera.setText(nombre);
     }
+
 
     /*
      * implementacion de Camara permisos permisosCamara1() y permisoCamaraGeneral()
