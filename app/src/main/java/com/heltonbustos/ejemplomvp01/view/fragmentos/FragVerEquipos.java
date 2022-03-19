@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -37,7 +38,18 @@ public class FragVerEquipos extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ver_equipos, container, false);
 
-        File ruta = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+        File ruta = null;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
+            ruta = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES+"/MyApp/");
+        }
+        else{
+            ruta = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        }
+
+
+
         File fotos[] = ruta.listFiles();
 
         String codigo = "";
