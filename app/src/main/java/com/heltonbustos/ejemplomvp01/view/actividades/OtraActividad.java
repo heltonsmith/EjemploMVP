@@ -52,6 +52,8 @@ import java.util.List;
 
 public class OtraActividad extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+    public static String ccc = "";
+
     /**
      * variables para manejar permisos y respuestas
      */
@@ -127,7 +129,6 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
 
 
     }
-
 
     /*
      * implementacion de Camara permisos permisosCamara1() y permisoCamaraGeneral()

@@ -3,4 +3,5 @@
     <dimen name="padding_general">20dp</dimen>
     <dimen name="icono_perfil">80dp</dimen>
     <dimen name="titulo_texto">20sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

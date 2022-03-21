@@ -1,6 +1,7 @@
 package com.heltonbustos.ejemplomvp01.interactor.modeloRecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.heltonbustos.ejemplomvp01.R;
+import com.heltonbustos.ejemplomvp01.view.actividades.OtraActividad;
+import com.heltonbustos.ejemplomvp01.view.actividades.VerRegistroUnico;
 
 import java.util.ArrayList;
 
@@ -88,6 +91,12 @@ public class AdaptadorDatos extends RecyclerView.Adapter<AdaptadorDatos.ViewHold
                     "Código: " + listDatos.get(getLayoutPosition()).getNombre(),
                     Toast.LENGTH_SHORT)
                     .show();
+
+            Intent intent = new Intent(context, VerRegistroUnico.class);
+
+            intent.putExtra("cod", listDatos.get(getLayoutPosition()).getCodigo());
+
+            context.startActivity(intent);
         }
     }
 
