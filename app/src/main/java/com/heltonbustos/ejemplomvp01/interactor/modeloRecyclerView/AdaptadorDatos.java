@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +17,7 @@ import com.heltonbustos.ejemplomvp01.R;
 
 import java.util.ArrayList;
 
-public class AdaptadorDatos extends RecyclerView.Adapter<AdaptadorDatos.ViewHolderDator>{
+public class AdaptadorDatos extends RecyclerView.Adapter<AdaptadorDatos.ViewHolderDator> {
 
     ArrayList<RegistroEquiposDatos> listDatos;
     Context context;
@@ -57,7 +58,8 @@ public class AdaptadorDatos extends RecyclerView.Adapter<AdaptadorDatos.ViewHold
         return listDatos.size();
     }
 
-    public class ViewHolderDator extends RecyclerView.ViewHolder{
+
+    public class ViewHolderDator extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imagen1;
         ImageView imagen2;
         TextView codigo;
@@ -75,6 +77,19 @@ public class AdaptadorDatos extends RecyclerView.Adapter<AdaptadorDatos.ViewHold
             fecha = itemView.findViewById(R.id.txtFechaEquipoL);
             bolso = itemView.findViewById(R.id.txtBolsoEquipoL);
             cargador = itemView.findViewById(R.id.txtCargadorEquipoL);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(
+                    view.getContext(),
+                    "Código: " + listDatos.get(getLayoutPosition()).getNombre(),
+                    Toast.LENGTH_SHORT)
+                    .show();
         }
     }
+
+
 }

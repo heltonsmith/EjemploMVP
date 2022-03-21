@@ -15,6 +15,7 @@ import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.heltonbustos.ejemplomvp01.R;
@@ -101,6 +102,7 @@ public class FragVerEquipos extends Fragment {
         else{
             Toast.makeText(getContext(), "Aun no hay Registros  ", Toast.LENGTH_SHORT).show();
         }
+
 
         fila.close();
         bd.close();

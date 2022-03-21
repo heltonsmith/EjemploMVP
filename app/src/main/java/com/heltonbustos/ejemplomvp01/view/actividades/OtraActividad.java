@@ -9,6 +9,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.app.Activity;
@@ -26,6 +27,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -82,6 +84,8 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
     //ImageView Cabecera
     ImageView imCabecera;
 
+    RecyclerView myRecycler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,6 +124,8 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
         View header = myNav.getHeaderView(0);
         cabecera = header.findViewById(R.id.txtNombreCabecera);
         cabecera.setText(nombre);
+
+
     }
 
 
@@ -490,6 +496,8 @@ public class OtraActividad extends AppCompatActivity implements NavigationView.O
      *
      *
      */
+
+
 
 
 }

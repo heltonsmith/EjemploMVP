@@ -29,29 +29,4 @@ public class ExampleInstrumentedTest {
         assertEquals("com.heltonbustos.ejemplomvp01", appContext.getPackageName());
     }
 
-    @Test
-    public void probarConsultaLoigin(){
-        String user = "1";
-        String pass = "1";
-        String nombre = "";
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-
-        ConexionBD conexion = new ConexionBD(appContext, "administracion", null, 1);
-        SQLiteDatabase bd = conexion.getWritableDatabase();
-
-        Cursor fila = bd.rawQuery("SELECT nombre FROM usuarios WHERE user='"+user+"' and pass='"+pass+"'", null);
-
-        if(fila.moveToFirst()){
-            nombre = fila.getString(0);
-            bd.close();
-        }
-        else{
-            bd.close();
-        }
-
-        assertEquals("helton", nombre);
-
-    }
-
-
 }
